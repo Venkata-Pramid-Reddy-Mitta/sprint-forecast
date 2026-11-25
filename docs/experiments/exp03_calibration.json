@@ -1,0 +1,16 @@
+{
+  "empirical_coverage": {
+    "50": 0.615,
+    "70": 0.743,
+    "85": 0.829,
+    "95": 0.9085
+  },
+  "history_len": 8,
+  "p85_empirical_coverage_pct": 82.9,
+  "p95_empirical_coverage_pct": 90.8,
+  "question": "empirical coverage of each nominal percentile on synthetic teams",
+  "resolution_floor": 0.0005,
+  "valid_teams": 2000,
+  "worst_shortfall_points": 4.1,
+  "worst_undercovered_percentile": 95
+}

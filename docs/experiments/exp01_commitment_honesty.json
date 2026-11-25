@@ -1,0 +1,117 @@
+{
+  "commitments_below_p50": 4,
+  "commitments_failing_target": 8,
+  "confidence_target": 0.85,
+  "question": "how many committed dates were below P50 or failed the 85% target",
+  "records": [
+    {
+      "below_p50": false,
+      "committed_sprints": 10,
+      "name": "steady-core",
+      "p50": 10,
+      "p85": 11,
+      "prob_meet": 0.7504,
+      "verdict": "unsafe"
+    },
+    {
+      "below_p50": true,
+      "committed_sprints": 7,
+      "name": "volatile-swings",
+      "p50": 9,
+      "p85": 10,
+      "prob_meet": 0.1448,
+      "verdict": "unsafe"
+    },
+    {
+      "below_p50": true,
+      "committed_sprints": 8,
+      "name": "fast-but-noisy",
+      "p50": 10,
+      "p85": 11,
+      "prob_meet": 0.2679,
+      "verdict": "unsafe"
+    },
+    {
+      "below_p50": false,
+      "committed_sprints": 12,
+      "name": "slow-steady",
+      "p50": 10,
+      "p85": 12,
+      "prob_meet": 0.917,
+      "verdict": "safe"
+    },
+    {
+      "below_p50": false,
+      "committed_sprints": 7,
+      "name": "short-history",
+      "p50": 7,
+      "p85": 8,
+      "prob_meet": 0.6034,
+      "verdict": "unsafe"
+    },
+    {
+      "below_p50": false,
+      "committed_sprints": 15,
+      "name": "holiday-gap",
+      "p50": 15,
+      "p85": 19,
+      "prob_meet": 0.5165,
+      "verdict": "unsafe"
+    },
+    {
+      "below_p50": false,
+      "committed_sprints": 17,
+      "name": "sandbagged",
+      "p50": 12,
+      "p85": 12,
+      "prob_meet": 1.0,
+      "verdict": "safe"
+    },
+    {
+      "below_p50": true,
+      "committed_sprints": 11,
+      "name": "stretch-goal",
+      "p50": 13,
+      "p85": 15,
+      "prob_meet": 0.2396,
+      "verdict": "unsafe"
+    },
+    {
+      "below_p50": false,
+      "committed_sprints": 13,
+      "name": "improving-team",
+      "p50": 11,
+      "p85": 13,
+      "prob_meet": 0.9618,
+      "verdict": "safe"
+    },
+    {
+      "below_p50": false,
+      "committed_sprints": 9,
+      "name": "thin-margin",
+      "p50": 9,
+      "p85": 11,
+      "prob_meet": 0.6267,
+      "verdict": "unsafe"
+    },
+    {
+      "below_p50": false,
+      "committed_sprints": 15,
+      "name": "big-backlog",
+      "p50": 13,
+      "p85": 14,
+      "prob_meet": 0.9835,
+      "verdict": "safe"
+    },
+    {
+      "below_p50": true,
+      "committed_sprints": 7,
+      "name": "tight-deadline",
+      "p50": 9,
+      "p85": 12,
+      "prob_meet": 0.2074,
+      "verdict": "unsafe"
+    }
+  ],
+  "scenarios_total": 12
+}

@@ -1,0 +1,93 @@
+{
+  "max_p50_p85_gap_sprints": 4,
+  "median_p50_p85_gap_sprints": 1,
+  "question": "the P50-to-P85 schedule buffer that a single date hides",
+  "records": [
+    {
+      "gap_days": 14,
+      "gap_sprints": 1,
+      "name": "steady-core",
+      "p50": 10,
+      "p85": 11
+    },
+    {
+      "gap_days": 14,
+      "gap_sprints": 1,
+      "name": "volatile-swings",
+      "p50": 9,
+      "p85": 10
+    },
+    {
+      "gap_days": 14,
+      "gap_sprints": 1,
+      "name": "fast-but-noisy",
+      "p50": 10,
+      "p85": 11
+    },
+    {
+      "gap_days": 28,
+      "gap_sprints": 2,
+      "name": "slow-steady",
+      "p50": 10,
+      "p85": 12
+    },
+    {
+      "gap_days": 14,
+      "gap_sprints": 1,
+      "name": "short-history",
+      "p50": 7,
+      "p85": 8
+    },
+    {
+      "gap_days": 56,
+      "gap_sprints": 4,
+      "name": "holiday-gap",
+      "p50": 15,
+      "p85": 19
+    },
+    {
+      "gap_days": 0,
+      "gap_sprints": 0,
+      "name": "sandbagged",
+      "p50": 12,
+      "p85": 12
+    },
+    {
+      "gap_days": 28,
+      "gap_sprints": 2,
+      "name": "stretch-goal",
+      "p50": 13,
+      "p85": 15
+    },
+    {
+      "gap_days": 28,
+      "gap_sprints": 2,
+      "name": "improving-team",
+      "p50": 11,
+      "p85": 13
+    },
+    {
+      "gap_days": 28,
+      "gap_sprints": 2,
+      "name": "thin-margin",
+      "p50": 9,
+      "p85": 11
+    },
+    {
+      "gap_days": 14,
+      "gap_sprints": 1,
+      "name": "big-backlog",
+      "p50": 13,
+      "p85": 14
+    },
+    {
+      "gap_days": 42,
+      "gap_sprints": 3,
+      "name": "tight-deadline",
+      "p50": 9,
+      "p85": 12
+    }
+  ],
+  "scenarios_total": 12,
+  "sprint_days": 14
+}

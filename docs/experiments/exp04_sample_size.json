@@ -1,0 +1,52 @@
+{
+  "lengths": [
+    4,
+    6,
+    8,
+    12,
+    20,
+    40
+  ],
+  "n_teams": 1500,
+  "p95_coverage_longest": 0.9493,
+  "p95_coverage_shortest": 0.838,
+  "question": "how coverage and forecast width change with history length",
+  "records": [
+    {
+      "history_len": 4,
+      "mean_gap_p50_p85_sprints": 1.305,
+      "p85_coverage": 0.7713,
+      "p95_coverage": 0.838
+    },
+    {
+      "history_len": 6,
+      "mean_gap_p50_p85_sprints": 1.413,
+      "p85_coverage": 0.8213,
+      "p95_coverage": 0.888
+    },
+    {
+      "history_len": 8,
+      "mean_gap_p50_p85_sprints": 1.439,
+      "p85_coverage": 0.8307,
+      "p95_coverage": 0.914
+    },
+    {
+      "history_len": 12,
+      "mean_gap_p50_p85_sprints": 1.479,
+      "p85_coverage": 0.8487,
+      "p95_coverage": 0.9293
+    },
+    {
+      "history_len": 20,
+      "mean_gap_p50_p85_sprints": 1.5,
+      "p85_coverage": 0.85,
+      "p95_coverage": 0.9307
+    },
+    {
+      "history_len": 40,
+      "mean_gap_p50_p85_sprints": 1.516,
+      "p85_coverage": 0.8793,
+      "p95_coverage": 0.9493
+    }
+  ]
+}

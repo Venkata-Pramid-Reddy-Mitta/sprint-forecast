@@ -1,0 +1,27 @@
+{
+  "cases_refused": 3,
+  "cases_total": 4,
+  "question": "degenerate inputs are refused, not given a fabricated date",
+  "records": [
+    {
+      "case": "all-zero history",
+      "exit_code": "3",
+      "outcome": "refused: invalid input"
+    },
+    {
+      "case": "unreachable backlog",
+      "exit_code": "3",
+      "outcome": "refused: unbounded"
+    },
+    {
+      "case": "empty history",
+      "exit_code": "3",
+      "outcome": "refused: invalid input"
+    },
+    {
+      "case": "healthy team (control)",
+      "exit_code": "0 or 2",
+      "outcome": "forecast produced"
+    }
+  ]
+}
