@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Test and coverage artefacts (regenerable by `make verify`)
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+coverage.json
+reports/
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+
+# OS noise
+.DS_Store
