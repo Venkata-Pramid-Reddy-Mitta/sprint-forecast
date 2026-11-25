@@ -1,0 +1,58 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # Install without the charts extra on purpose: tests, experiments and receipts must
+      # pass on the no-extras install, so a missing matplotlib can never mask a broken core.
+      - name: Install (no optional extras)
+        run: python -m pip install -e ".[dev]"
+
+      - name: Lint
+        run: python -m ruff check .
+
+      - name: Tests
+        run: |
+          mkdir -p reports
+          python -m pytest --cov=sprint_forecast --cov-branch \
+            --cov-report=json:coverage.json --cov-report=xml:coverage.xml \
+            --junitxml=reports/junit.xml
+
+      - name: Coverage floor
+        run: python tools/check_coverage.py --min 95
+
+      - name: Experiments
+        run: make experiments
+
+      - name: Receipts (re-measure every figure and check the docs)
+        run: |
+          python tools/collect_metrics.py --skip-tests
+          python tools/check_numbers.py
+
+      - name: Job summary (the uncomfortable table)
+        if: always()
+        run: python tools/job_summary.py >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload experiment JSON
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: experiments-py${{ matrix.python-version }}
+          path: docs/experiments/*.json
