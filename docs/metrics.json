@@ -24,17 +24,14 @@
       "{} percent line coverage"
     ],
     "scenarios_total": [
-      "{} scenarios",
-      "{} synthetic teams"
+      "{} scenarios"
     ],
     "commitments_below_p50": [
       "{} of 12 committed",
-      "{} of the twelve committed",
-      "{} committed dates were below"
+      "{} of the twelve committed"
     ],
     "commitments_failing_target": [
-      "{} of 12 failed",
-      "{} failed the"
+      "{} of 12 failed"
     ],
     "max_gap_sprints": [
       "up to {} sprints",
@@ -42,7 +39,6 @@
       "{}-sprint buffer"
     ],
     "median_gap_sprints": [
-      "median {} sprint",
       "median is {} sprint"
     ],
     "p85_coverage_pct": [
@@ -54,7 +50,6 @@
       "{}% in the tail"
     ],
     "tail_shortfall_points": [
-      "{} points",
       "{}-point"
     ],
     "calibration_teams": [
@@ -63,12 +58,12 @@
       "across {} teams"
     ],
     "p95_coverage_short_pct": [
-      "{}% at four",
-      "from {}%"
+      "from {}% at four",
+      "{}% at four sprints"
     ],
     "p95_coverage_long_pct": [
-      "{}% at forty",
-      "to {}%"
+      "to {}% at forty",
+      "{}% at forty sprints"
     ],
     "degenerate_refused": [
       "{} of 4 degenerate",

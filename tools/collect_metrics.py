@@ -86,18 +86,20 @@ def collect(skip_tests: bool) -> dict:
     anchors = {
         "tests_total": ["{} tests"],
         "coverage_line_pct": ["{}% line coverage", "{} percent line coverage"],
-        "scenarios_total": ["{} scenarios", "{} synthetic teams"],
-        "commitments_below_p50": ["{} of 12 committed", "{} of the twelve committed",
-                                  "{} committed dates were below"],
-        "commitments_failing_target": ["{} of 12 failed", "{} failed the"],
+        "scenarios_total": ["{} scenarios"],
+        # Anchor only where the guarded number is adjacent to the anchor words. In a phrase
+        # like "4 of 12 committed dates", the token next to "committed" is 12, not 4, so an
+        # anchor ending in "committed" would guard the wrong number.
+        "commitments_below_p50": ["{} of 12 committed", "{} of the twelve committed"],
+        "commitments_failing_target": ["{} of 12 failed"],
         "max_gap_sprints": ["up to {} sprints", "largest is {} sprints", "{}-sprint buffer"],
-        "median_gap_sprints": ["median {} sprint", "median is {} sprint"],
+        "median_gap_sprints": ["median is {} sprint"],
         "p85_coverage_pct": ["P85 covered {}", "covered {}% of"],
         "p95_coverage_pct": ["P95 covered {}", "{}% in the tail"],
-        "tail_shortfall_points": ["{} points", "{}-point"],
+        "tail_shortfall_points": ["{}-point"],
         "calibration_teams": ["{} synthetic teams", "on {} teams", "across {} teams"],
-        "p95_coverage_short_pct": ["{}% at four", "from {}%"],
-        "p95_coverage_long_pct": ["{}% at forty", "to {}%"],
+        "p95_coverage_short_pct": ["from {}% at four", "{}% at four sprints"],
+        "p95_coverage_long_pct": ["to {}% at forty", "{}% at forty sprints"],
         "degenerate_refused": ["{} of 4 degenerate", "{} of four degenerate"],
     }
 

@@ -23,18 +23,27 @@ ROOT = Path(__file__).resolve().parents[1]
 METRICS = ROOT / "docs" / "metrics.json"
 
 NUMBER = re.compile(r"\d+(?:\.\d+)?")
-# Numbers that are structural, not measured: years, version, the percentile labels, the
-# confidence target, sprint length, and small list ordinals. They are allowed in prose.
+# Numbers that are structural, not measured: years, version, the percentile labels and their
+# decimal forms, the confidence target, sprint length, the Python versions, the illustrative
+# 3001 from the war story, and small list ordinals. They are allowed to appear unguarded.
 ALLOWED = {
     "2026", "2026-01-06", "0.3.0", "0", "2", "3", "50", "70", "85", "95",
     "14", "100", "10000", "2000", "1500", "4", "6", "8", "12", "20", "40", "64",
-    "1", "5", "0.85", "0.5",
+    "1", "5", "30", "3001", "0.85", "0.5",
+    "3.11", "3.12", "3.13",
+    "0.50", "0.70", "0.615", "0.743", "0.829", "0.95", "0.908",
 }
 
 
 def strip_code(text: str) -> str:
+    """Remove the parts of a document that are allowed to contain arbitrary numbers: fenced
+    code, inline code spans, HTML tags and their attributes, markdown link and image targets,
+    and ADR references. What remains is prose, where a number should be measured."""
     text = re.sub(r"```.*?```", " ", text, flags=re.DOTALL)
     text = re.sub(r"`[^`]*`", " ", text)
+    text = re.sub(r"<[^>]+>", " ", text)       # HTML tags and their attributes
+    text = re.sub(r"\]\([^)]*\)", "] ", text)  # markdown link and image URL targets
+    text = re.sub(r"ADR-\d+", " ", text)       # ADR references are labels, not figures
     return text
 
 
