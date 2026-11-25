@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#1b4f72"/></marker></defs>
+<rect x="0" y="0" width="900" height="540" fill="#f7f8fa"/>
+<text x="450.0" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#1b4f72">sprint-forecast data flow</text>
+<rect x="40" y="70" width="180" height="56" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.5"/><text x="130.0" y="94.0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#111827"><tspan x="130.0" dy="0">throughput history</tspan><tspan x="130.0" dy="18">(past sprints)</tspan></text>
+<rect x="40" y="150" width="180" height="56" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.5"/><text x="130.0" y="174.0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#111827"><tspan x="130.0" dy="0">backlog</tspan><tspan x="130.0" dy="18">(items remaining)</tspan></text>
+<rect x="270" y="110" width="160" height="56" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.5"/><text x="350.0" y="134.0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#111827"><tspan x="350.0" dy="0">validate</tspan><tspan x="350.0" dy="18">(reject bad input)</tspan></text>
+<rect x="480" y="110" width="180" height="56" rx="8" fill="#eef4fb" stroke="#334155" stroke-width="1.5"/><text x="570.0" y="134.0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#111827"><tspan x="570.0" dy="0">Monte Carlo</tspan><tspan x="570.0" dy="18">bootstrap sampler</tspan></text>
+<rect x="700" y="110" width="160" height="56" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.5"/><text x="780.0" y="134.0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#111827"><tspan x="780.0" dy="0">completion</tspan><tspan x="780.0" dy="18">distribution</tspan></text>
+<rect x="480" y="230" width="180" height="56" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.5"/><text x="570.0" y="254.0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#111827"><tspan x="570.0" dy="0">percentiles</tspan><tspan x="570.0" dy="18">P50 / P85 / P95</tspan></text>
+<rect x="700" y="230" width="160" height="56" rx="8" fill="#ffffff" stroke="#334155" stroke-width="1.5"/><text x="780.0" y="254.0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#111827"><tspan x="780.0" dy="0">committed date</tspan><tspan x="780.0" dy="18">to probability</tspan></text>
+<rect x="480" y="320" width="380" height="56" rx="8" fill="#eef4fb" stroke="#334155" stroke-width="1.5"/><text x="670.0" y="344.0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#111827"><tspan x="670.0" dy="0">verdict: safe / unsafe / cannot answer</tspan><tspan x="670.0" dy="18">exit 0 / 2 / 3</tspan></text>
+<rect x="270" y="430" width="590" height="70" rx="8" fill="#fbf3ea" stroke="#334155" stroke-width="1.5"/><text x="565.0" y="461.0" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#111827"><tspan x="565.0" dy="0">calibration engine: synthetic teams from a known distribution</tspan><tspan x="565.0" dy="18">grades each percentile (empirical vs nominal coverage)</tspan></text>
+<line x1="220" y1="98" x2="270" y2="125" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="220" y1="178" x2="270" y2="150" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="430" y1="138" x2="480" y2="138" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="660" y1="138" x2="700" y2="138" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="620" y1="166" x2="560" y2="230" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="780" y1="166" x2="780" y2="230" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="660" y1="258" x2="620" y2="320" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="780" y1="258" x2="700" y2="320" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="570" y1="166" x2="500" y2="320" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="560" y1="376" x2="560" y2="430" stroke="#1b4f72" stroke-width="1.8" marker-end="url(#a)"/>
+</svg>

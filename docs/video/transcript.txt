@@ -1,0 +1,53 @@
+$ sprint-forecast forecast --history 7 12 3 9 5 11 4 8 6 10 --backlog 70 --committed 7 --name volatile-swings
+Forecast: volatile-swings
+  history: 10 sprints, mean 7.50 items/sprint, backlog 70 items, 10000 trials
+  percentile   sprints   completion
+    P50            10   2026-05-26
+    P70            10   2026-05-26
+    P85            11   2026-06-09
+    P95            12   2026-06-23
+  committed: sprint 7 (2026-04-14), probability of meeting it 1%
+  verdict: UNSAFE at a 85% confidence target  [below P50: a coin flip or worse]
+[exit 2]
+
+$ sprint-forecast forecast --history 7 12 3 9 5 11 4 8 6 10 --backlog 70 --committed 11 --name volatile-swings
+Forecast: volatile-swings
+  history: 10 sprints, mean 7.50 items/sprint, backlog 70 items, 10000 trials
+  percentile   sprints   completion
+    P50            10   2026-05-26
+    P70            10   2026-05-26
+    P85            11   2026-06-09
+    P95            12   2026-06-23
+  committed: sprint 11 (2026-06-09), probability of meeting it 92%
+  verdict: SAFE at a 85% confidence target
+[exit 0]
+
+$ sprint-forecast scenarios
+12 scenarios forecast
+4 committed dates were below P50 (a coin flip or worse)
+8 did not clear the 85% target
+[exit 0]
+
+$ sprint-forecast --trials 2000 calibrate --teams 2000 --history-len 8
+{
+  "history_len": 8,
+  "valid_teams": 2000,
+  "nominal": {
+    "50": 0.5,
+    "70": 0.7,
+    "85": 0.85,
+    "95": 0.95
+  },
+  "empirical": {
+    "50": 0.615,
+    "70": 0.743,
+    "85": 0.829,
+    "95": 0.9085
+  },
+  "resolution_floor": 0.0005
+}
+[exit 0]
+
+$ sprint-forecast forecast --history 0 0 0 0 1 --backlog 600
+cannot forecast: 100% of trials did not finish within 2000 sprints; throughput is too often zero to forecast a date
+[exit 3]

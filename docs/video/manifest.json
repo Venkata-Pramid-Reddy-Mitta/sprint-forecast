@@ -1,0 +1,35 @@
+{
+  "note": "captured by tools/record_demo.py; every line is real output, no browser",
+  "segments": [
+    {
+      "command": "sprint-forecast forecast --history 7 12 3 9 5 11 4 8 6 10 --backlog 70 --committed 7 --name volatile-swings",
+      "exit_code": 2,
+      "duration_s": 0.138,
+      "stdout_lines": 9
+    },
+    {
+      "command": "sprint-forecast forecast --history 7 12 3 9 5 11 4 8 6 10 --backlog 70 --committed 11 --name volatile-swings",
+      "exit_code": 0,
+      "duration_s": 0.134,
+      "stdout_lines": 9
+    },
+    {
+      "command": "sprint-forecast scenarios",
+      "exit_code": 0,
+      "duration_s": 0.153,
+      "stdout_lines": 3
+    },
+    {
+      "command": "sprint-forecast --trials 2000 calibrate --teams 2000 --history-len 8",
+      "exit_code": 0,
+      "duration_s": 1.392,
+      "stdout_lines": 17
+    },
+    {
+      "command": "sprint-forecast forecast --history 0 0 0 0 1 --backlog 600",
+      "exit_code": 3,
+      "duration_s": 0.332,
+      "stdout_lines": 0
+    }
+  ]
+}
