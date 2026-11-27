@@ -2,6 +2,7 @@
 
 **Prices a committed delivery date as a probability instead of a promise, by resampling a team's own past throughput, and then measures whether its own percentiles can be trusted.**
 
+[![ci](https://github.com/Venkata-Pramid-Reddy-Mitta/sprint-forecast/actions/workflows/ci.yml/badge.svg)](https://github.com/Venkata-Pramid-Reddy-Mitta/sprint-forecast/actions/workflows/ci.yml)
 ![tests](https://img.shields.io/badge/tests-94-1b7a3d)
 ![line coverage](https://img.shields.io/badge/line%20coverage-99.5%25-1b7a3d)
 ![python](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-1b4f72)
