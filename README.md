@@ -91,7 +91,7 @@ Sweeping the number of observed sprints shows the tail closing: P95 coverage cli
 
 ## The bug the measurement found
 
-The simulation cap is meant to stop a near-stalled team from forcing an unbounded run. It was first computed as `max(naive + 1, min(multiple * naive, ABSOLUTE_CAP))`. For a team whose naive estimate alone exceeded the absolute cap, the outer `max` put the cap back above the guard, so the engine looped `naive + 1` times (3001 on the test input) rather than stopping at 2000. The guard was present but not guarding. The symptom was an unbounded message quoting 3001 sprints when the absolute cap was 2000. The fix clamps the cap with a final `min` against the absolute ceiling, which also gives the honest behaviour: a team that needs more sprints than we simulate is simply reported unbounded. `tests/test_forecast.py::test_a_near_stalled_team_capped_at_the_absolute_cap_is_unbounded` fails against the old expression and passes against the fixed one.
+The simulation cap is meant to stop a near-stalled team from forcing an unbounded run. It was first computed as `max(naive + 1, min(multiple * naive, ABSOLUTE_CAP))`. For a team whose naive estimate alone exceeded the absolute cap, the outer `max` put the cap back above the guard, so the engine looped `naive + 1` times (3001 on the test input) rather than stopping at 2000. The guard was present but not guarding. The symptom was an unbounded message quoting 3001 sprints when the absolute cap was 2000. The fix clamps the cap with a final `min` against the absolute ceiling, which also gives the honest behavior: a team that needs more sprints than we simulate is simply reported unbounded. `tests/test_forecast.py::test_a_near_stalled_team_capped_at_the_absolute_cap_is_unbounded` fails against the old expression and passes against the fixed one.
 
 ## Degenerate inputs
 
@@ -159,7 +159,7 @@ Make targets: `make lint`, `make test`, `make experiments`, `make receipts`, `ma
 
 ## The Pivot and future work
 
-Out of scope on purpose: **non-stationary forecasting** (modelling a throughput trend or a scope change). The trigger to add it is a real scenario with a documented structural break on which the stationary forecast is provably miscalibrated; until then it would be complexity guarding against a case the fixture cannot yet show. A v2 would need: a changepoint test on the history, a weighted or trend-aware resampler, and a first metric to watch (does calibrated coverage hold across a known break).
+Out of scope on purpose: **non-stationary forecasting** (modeling a throughput trend or a scope change). The trigger to add it is a real scenario with a documented structural break on which the stationary forecast is provably miscalibrated; until then it would be complexity guarding against a case the fixture cannot yet show. A v2 would need: a changepoint test on the history, a weighted or trend-aware resampler, and a first metric to watch (does calibrated coverage hold across a known break).
 
 ## License
 

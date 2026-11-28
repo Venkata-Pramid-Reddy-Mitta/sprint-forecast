@@ -26,7 +26,7 @@ missing tool rather than work around it silently.
 ## Alternatives considered
 
 - **Ship a screenshot generated elsewhere.** Rejected: a screenshot that `make evidence`
-  cannot regenerate is exactly the stale artefact the receipts discipline exists to prevent.
+  cannot regenerate is exactly the stale artifact the receipts discipline exists to prevent.
 - **Claim the screenshots exist.** Not an option; the evidence has to be real.
 
 ## Consequences
